@@ -1,17 +1,17 @@
 {% set name = "quadprog" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: f308b9a4f0368c956fd48e480dfadad7a9497ed7c1bb3059a2777b7deb4fbff9
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3dedf9366929d87828584037a1228e03fbf9e72cc8cbb203683aede5c3350b07
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -34,11 +34,11 @@ test:
     - pip
 
 about:
-  home: "https://github.com/rmcgibbo/quadprog"
+  home: https://github.com/rmcgibbo/quadprog
   license: GPL-2.0-or-later
   license_family: GPL2
   license_file: LICENSE
-  summary: "Quadratic Programming Solver"
+  summary: Quadratic Programming Solver
 
 extra:
   recipe-maintainers:

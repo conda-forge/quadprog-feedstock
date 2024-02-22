@@ -1,5 +1,5 @@
 {% set name = "quadprog" %}
-{% set version = "0.1.11" %}
+{% set version = "0.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8e320f9f7f1466141e317e61736e8108720e6adbae53f9d6960f726efef788d9
+  sha256: 594c18327e13c4246b06b14d9e90c43faac4ba702be6ae0aa0192e50a7795e47
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
